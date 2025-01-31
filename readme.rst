@@ -1,71 +1,84 @@
-###################
-What is CodeIgniter
-###################
+# 🚀 Sistem Manajemen Produk - CodeIgniter 3
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+Sistem ini adalah aplikasi berbasis web untuk **reservasi** dan **manajemen produk** yang dikembangkan menggunakan **CodeIgniter 3** dan **Bootstrap 5.3**. Sistem ini mendukung **CRUD produk** serta tampilan data interaktif dengan **DataTables**.
 
-*******************
-Release Information
-*******************
+## ✨ Fitur Utama
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+- ✅ **CRUD Produk** (Tambah, Edit, Hapus, dan Lihat Produk)
+- ✅ **Tampilan Data Dinamis** menggunakan DataTables
+- ✅ **Modal Konfirmasi Hapus Produk**
+- ✅ **Pencarian & Pagination Otomatis** dengan DataTables
 
-**************************
-Changelog and New Features
-**************************
+## 🛠 Tech Stack
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+Proyek ini dibangun dengan teknologi berikut:
 
-*******************
-Server Requirements
-*******************
+- **CodeIgniter 3** - Framework PHP ringan
+- **Bootstrap 5.3** - Framework CSS untuk UI responsif
+- **jQuery** - Library JavaScript untuk manipulasi DOM
+- **DataTables** - Plugin jQuery untuk menampilkan tabel interaktif
+- **MySQL** - Database untuk menyimpan data
+- **PHP 7+** - Bahasa pemrograman
 
-PHP version 5.6 or newer is recommended.
+## 🛠 Instalasi
 
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
+### 1️⃣ Clone Repository
 
-************
-Installation
-************
+```sh
+git clone https://github.com/bersianturi/Test-Programer---Bernard-Andrean-Sianturi.git
+cd Test-Programer---Bernard-Andrean-Sianturi
+```
 
-Please see the `installation section <https://codeigniter.com/userguide3/installation/index.html>`_
-of the CodeIgniter User Guide.
+### 2️⃣ Konfigurasi Database
 
-*******
-License
-*******
+Edit file `application/config/database.php`:
 
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
+```php
+$active_group = 'default';
+$query_builder = TRUE;
+$db['default'] = array(
+    'dsn'   => '',
+    'hostname' => 'localhost',
+    'username' => 'root',
+    'password' => '',
+    'database' => 'junior_programmer_test',
+    'dbdriver' => 'mysqli',
+    'dbprefix' => '',
+    'pconnect' => FALSE,
+    'db_debug' => (ENVIRONMENT !== 'production'),
+    'cache_on' => FALSE,
+    'cachedir' => '',
+    'char_set' => 'utf8',
+    'dbcollat' => 'utf8_general_ci',
+    'swap_pre' => '',
+    'encrypt' => FALSE,
+    'compress' => FALSE,
+    'stricton' => FALSE,
+    'failover' => array(),
+    'save_queries' => TRUE
+);
+```
 
-*********
-Resources
-*********
+### 3️⃣ Import Database
 
--  `User Guide <https://codeigniter.com/docs>`_
--  `Contributing Guide <https://github.com/bcit-ci/CodeIgniter/blob/develop/contributing.md>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
+1. Buka **phpMyAdmin** melalui browser di `http://localhost/phpmyadmin/`.
+2. Klik **Database** dan buat database baru dengan nama `junior_programmer_test`.
+3. Pilih database yang baru dibuat, lalu klik tab **Import**.
+4. Klik **Choose File** dan pilih file `junior_programmer_test.sql` yang ada di folder `database/`.
+5. Klik **Go** untuk memulai proses impor.
 
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
+### 4️⃣ Jalankan Aplikasi
 
-***************
-Acknowledgement
-***************
+Jika menggunakan XAMPP, pastikan Apache & MySQL berjalan, lalu akses:
 
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+```
+http://localhost/Test-Programer---Bernard-Andrean-Sianturi/
+```
+
+## 📜 Lisensi
+
+Proyek ini menggunakan lisensi **MIT**. Anda bebas menggunakannya untuk keperluan pribadi atau komersial.
+
+---
+
+💡 **Jika ada pertanyaan atau saran, silakan buat issue atau pull request di repository ini!** 🚀
